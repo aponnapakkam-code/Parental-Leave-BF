@@ -11,8 +11,8 @@ The intervention is the introduction of the 2022 parental leave policy. This is 
 
 All code is written in R, with a focus on transparency and reproducibility.
 
----
 
+```
 ## Repository Structure
 
 ├── data/
@@ -32,3 +32,4 @@ All code is written in R, with a focus on transparency and reproducibility.
 │   └── figures/
 │       └── (optional plots)
 ├── README.md
+```
