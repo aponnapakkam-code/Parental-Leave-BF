@@ -6,7 +6,8 @@ library(tidyverse)
 library(janitor)
 library(DescTools)
 
-path <- "Copy of Breastfeeding_Study_Stats_Final Version (1).xlsx"
+path <- "raw_data.xlsx"
+#Data originally had 2 separate sheets, one with demographic information, other with feeding information at 2, 4, 6 months
 
 # ---- 1) Read & clean sheets ----
 demo <- read_excel(path, sheet = "Mother_Infant_Demographics") |> clean_names()
@@ -85,3 +86,4 @@ if (nrow(dups) > 0) {
   # If desired, keep first per infant×month:
 dat <- dat |> arrange(infant_patient, month) |> distinct(infant_patient, month, .keep_all = TRUE)
 }
+
