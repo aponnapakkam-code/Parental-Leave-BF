@@ -2,7 +2,7 @@ library(dplyr)
 library(tidyr)
 
 
-# ---- Step 0: Unadjusted Officer vs Enlisted by month (Any & Exclusive) ----
+# ---- Unadjusted Officer vs Enlisted by month (Any & Exclusive) ----
 compare_oe <- function(df, outcome_var) {
   # Summarize counts by month × rank
   agg <- df %>%
@@ -80,4 +80,4 @@ results_step0 <- bind_rows(step0_any, step0_excl) |>
   as.data.frame()
 print(results_step0)
 
-write.csv(results_step0, "O_E_unadjusted.csv", row.names = FALSE)
+
