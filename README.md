@@ -17,12 +17,13 @@ All code is written in R, with a focus on transparency and reproducibility.
 
 ├── data/
 │   ├── raw/
-│      └── dat_raw.csv           # Original de-identified data (NOT in repo- contact for access)
+│      └── dat_raw.csv                      # Original de-identified data (NOT in repo- contact for access)
 ├── R/
-│   ├── 01_cleaning.R             # Data cleaning, factor coding, variable derivation
-│   ├── 02_unadjusted_RD.R        # Unadjusted officer vs enlisted RDs + CIs + Fisher tests
-│   ├── 03_interaction_check.R    # Unadjusted rank × epoch interaction tests
-│   ├── 04_adjusted_RD_brglm.R    # Adjusted RDs via brglm + bootstrap CIs
+│   ├── 01_cleaning.R                       # Data cleaning, factor coding, variable derivation
+│   ├── 02.01_pooled_unadjusted_RD.R        # Unadjusted officer vs enlisted RDs + CIs + Fisher tests (pooled)
+|   ├── 02.02_unadjusted_RD_by_epoch.R      # Unadjusted officer vs enlisted RDs by epoch (pre vs post)
+│   ├── 03_interaction_check.R              # Unadjusted rank × epoch interaction tests
+│   ├── 04_adjusted_RD_brglm.R              # Adjusted RDs via brglm + bootstrap CIs
 | 
 ├── output/
 │   ├── tables/
